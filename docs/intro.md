@@ -14,13 +14,16 @@ However, while traveling later on a trip from Beijing to Harbin to visit my girl
 
 
 ![Alt Text](../src/Assets/Train.png)
+
 High Speed Train from Beijing to Harbin 
 
 
 ![Alt Text](../src/Assets/Graduation.png)
-Me Graduating with my batch mates in 2015
+
+Me Graduating with my batch mates in 2015 (Me, Bottom 3rd Left)
 
 ![Alt Text](../src/Assets/LocalBand.png)
+
 My band in the University
 
 
