@@ -1,41 +1,90 @@
 # Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This is a Kowledge hub
 
-### Installation
+### Following Tech are discussed
+Programming Languages & Frameworks:
 
-```
-$ yarn
-```
+HTML/CSS/JavaScript
+.NET
+TypeScript
+PHP
+C#
+Java
+Scala
+Coffee Script
+JavaScript:
 
-### Local Development
+Vanilla JS
+ES6
+AJAX
+Promises
+async/await
+Web APIs
+React
+Next JS
+Node JS
+Express
+jQuery
+Local Storage
+Cookies
+Testing:
 
-```
-$ yarn start
-```
+React Testing Library
+Jest
+Enzyme
+Styling & UI Component Libraries:
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Responsive design
+CSS (Grid, Floats, Flexbox)
+LESS
+SASS
+Bootstrap
+Material UI
+Chakra UI
+Framer
+Tailwind
+Database:
 
-### Build
+DynamoDB
+SQL Server
+MySQL
+Oracle
+PostgreSQL
+MongoDB
+Cloud Technologies:
 
-```
-$ yarn build
-```
+Microsoft Azure
+AWS
+CMS:
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Drupal
+WordPress
+Design Tools:
 
-### Deployment
+Figma
+Adobe Creative Suite
+Canva
+CI/CD Tools:
 
-Using SSH:
+Git
+GitHub
+Bitbucket
+Jenkins
+Other Tools & IDE’s:
 
-```
-$ USE_SSH=true yarn deploy
-```
+Jira
+Docker
+IntelliJ
+VS Code
+iTerm2
+Methodologies & Architecture:
 
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+SOLID
+Agile
+Scrum
+MVC
+TDD
+Clean Architecture
+Microservices
+Atomic Design
