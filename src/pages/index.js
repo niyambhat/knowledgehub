@@ -6,11 +6,14 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
+import { Banner } from '../components/Layout/Banner';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <>
+    
+    {/* <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -22,7 +25,12 @@ function HomepageHeader() {
            </Link>
         </div>
       </div>
-    </header>
+    </header> */}
+    {/* <div>
+    <Banner/>
+    </div> */}
+    </>
+    
   );
 }
 
@@ -34,7 +42,8 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        {/* <HomepageFeatures /> */}
+        <Banner/>
       </main>
     </Layout>
   );

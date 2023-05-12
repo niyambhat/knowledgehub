@@ -17,7 +17,7 @@ There are several different types of navigation that can be used in websites and
 
 
 
-# Navigation
+# SPA Navigation, React Navigation
 React is a JavaScript library that helps build user interfaces, and it offers a different approach to handling page navigation compared to traditional HTML pages. In React, navigation is handled through the manipulation of the virtual DOM, which allows for faster and more efficient updates to the UI.
 
 React's single-page application (SPA) architecture means that the entire application is loaded as a single page, and the content is dynamically updated as the user interacts with the app. This approach offers several benefits, including faster load times, smoother user experience, and easier code maintenance.
@@ -28,5 +28,3 @@ Overall, React's approach to handling navigation and building UIs offers a more 
 
 
 ![Alt Text](../../src/Assets/SPA.png)
-
-
