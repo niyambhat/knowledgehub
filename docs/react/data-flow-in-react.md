@@ -41,15 +41,3 @@ function Foam(props) {
 
 When data flows through props in a single direction, it becomes easier to comprehend the interactions between different components. If data were to move in all directions, it would be more difficult to understand its logical flow. Moreover, any attempts at optimization would likely be less efficient, particularly in modern React.
 
-## My Component
-
-Here is my component:
-
-```jsx
-import { MyComponent } from './MyComponent';
-
-function App() {
-  return <MyComponent />;
-}
-
-export default App;
