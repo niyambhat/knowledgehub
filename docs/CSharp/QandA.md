@@ -8,11 +8,13 @@ sidebar_position: 4
 ----
 
   1. [Explicit vs Implicit Constructor](#constructor)
-  1. [Variables](#Variables)
+  1. [Types of Variables](#Variables)
   1. [Access Specifiers](#access)
  
 
 #### Explicit vs Implicit Constructor {#constructor}
+---
+
 **1. Does a class get a constructor if not defined by the programmer?**
     
     Yes
@@ -23,11 +25,13 @@ Implicitly constructors a required in initialise the variables of a class with t
 
 Note: Generally every class requrie some values for execution and the values that is requored fora class are sent by constructor.
 
-#### Variables {#Variables}
+#### Different types of Variables {#Variables}
+---
+
 **3. What is a class?**
 
 A class is a user-defined type.
-> Did you know that "string" is also a type.
+> *** Did you know that "string" is also a type. ***
 ```
 string = "Hello"; //no memory allocation
 but,
@@ -36,44 +40,49 @@ string name = "Hello"; //creates an instance of string with new value
 
 **4. Differences between variable, instance and reference of a class?**
 
-- Variable
-- Instance
-- Refefrence 
-
 ```csharp
-namespace First{
-int x = 100; // varaiable of class 
-    class First{
+namespace First
+{
+    int x = 100; // non static class variable
+    class First
+    {
         static void Main(string[] args)
         {
-            Console.WriteLine(x); //errors because x is an instance member
+            Console.WriteLine(x); // Error: x is an instance member
         }
     }
-    
-// This works as f now gets a memory
-     class First{
-        int x = 100;
+    class First
+    {
+        int x = 100; 
         static void Main(string[] args)
-        {   
-            First f = new First(); // f is instance of the class
-            Console.WriteLine(f.x); //
+        {
+            First f = new First(); // 'f' is an instance of the class
+            Console.WriteLine(f.x); // This works as 'f' now gets a memory
         }
     }
 }
-
-
-
 ```
-#### Access Specifiers {#access}
+**Explanation:**
 
+- **Variable**: In this code, `x` is a non-static class variable. It is declared directly within the class, but outside any method or constructor. It can be accessed by all instance methods and constructors within the class.
+
+- **Instance**: The second `First` class contains an instance variable `x`. An instance variable is declared within a class but outside any method or constructor, and it is associated with instances (objects) of the class. Each instance of the class will have its own separate copy of the instance variable.
+
+- **Reference**: In the second `Main` method, `f` is a reference to an instance of the `First` class. It is created using the `new` keyword and assigned to an instance of `First`. The reference `f` allows us to access the members (such as `x`) of the created instance.
+
+
+
+
+#### Access Specifiers {#access}
+---
 **5. What is Access Specifier?**
 
 Five types of access specifier:
-- Public: Straight-forward, accesible from everywhere
-- Private: Is only accesible only within the class it was defined
-- internal 
-- protected: Within class and child classes
-- protected internal
+- **public**: Straight-forward, accessible from everywhere.
+- **private**: Only accessible within the class it was defined.
+- **internal**: Accessible within the same assembly (project).
+- **protected**: Accessible within the class and its derived (child) classes.
+- **protected internal**: Accessible within the same assembly (project) and its derived (child) classes.
 
 ```csharp
 using System;
