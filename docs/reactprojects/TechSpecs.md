@@ -2,11 +2,23 @@
 sidebar_position: 2
 ---
 
-## Tech Specs
+# Technology Specifications
 
+Platform and Technologies Used for Web Application Development:
+- Front-end:
+  - Design Tool: Figma
+  - Programming Languages: HTML, CSS, JavaScript
+  - Framework: React.js
+- Back-end:
+  - Programming Language: Python
+  - Framework: Django
+- Hosting:
+  - Platform: Vercel
+
+**2. What other specifications are being added to improve the web application?**
 Several important considerations and best practices have been applied throughout the development of this project. These include:
 
-1. **Semantic HTML**: HTML that uses semantic markup to provide meaning and context to the content on the page, improving accessibility and SEO.
+> **Semantic HTML**: HTML that uses semantic markup to provide meaning and context to the content on the page, improving accessibility and SEO.
 Example:
 ```HTML
 <div>    
@@ -28,7 +40,7 @@ is replaced with,
 </nav>
 ```
 
-2. **Grid CSS**: The project incorporates a modern CSS layout system that enables effortless creation of responsive grid-based layouts. It also implements a meta standard layout, which adheres to widely accepted design conventions, enhancing the overall usability and ensuring smooth navigation for users on the website.Additionally, the project makes use of the Open Graph Protocol (OGP). OGP is a set of metadata tags that enhance the presentation of web pages when shared on social media platforms. By implementing OGP, the project ensures that shared links provide accurate and visually appealing previews, maximizing engagement and improving the user experience when sharing content on social media.
+> **Grid CSS**: The project incorporates a modern CSS layout system that enables effortless creation of responsive grid-based layouts. It also implements a meta standard layout, which adheres to widely accepted design conventions, enhancing the overall usability and ensuring smooth navigation for users on the website.Additionally, the project makes use of the Open Graph Protocol (OGP). OGP is a set of metadata tags that enhance the presentation of web pages when shared on social media platforms. By implementing OGP, the project ensures that shared links provide accurate and visually appealing previews, maximizing engagement and improving the user experience when sharing content on social media.
 
 ```HTML
 <meta name="description" content="Welcome to Little Lemons restaurant, where we serve delicious and healthy meals made with fresh ingredients. Visit us today for breakfast, lunch, or dinner and experience our friendly service and cozy atmosphere." />

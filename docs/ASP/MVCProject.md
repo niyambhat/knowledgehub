@@ -12,7 +12,7 @@ sidebar_position: 3
 In this program
 
 
-## View using Rzaor CS
+## View using Razor CS
 Technologies: ASP.NET, C#, Razor pages, Entity ORM
 ## Steps
 
