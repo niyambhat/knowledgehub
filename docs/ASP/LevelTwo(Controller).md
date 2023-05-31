@@ -1,13 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Controller & View
+# Models
 
 Keep it simple. 
 
-Catching the low hanging fruits first. 
-UI Developer hats on.
+MVC Concepts in C#.
 
 ## 1. How to create a simple website?
 
@@ -53,4 +52,7 @@ We can create dynamic sections and put into the pages in view.
 Ex: 
 In this scenario, we create a Header.cshtml,
 Then we call this in the About page. 
+
+
+ 
 

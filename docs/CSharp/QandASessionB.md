@@ -11,7 +11,8 @@ sidebar_position: 4
 1. [How is Inheritance implemented in C#?](#inheritance)
 1. [What is the Parent class of all the classes?](#object)
 1. [What are different types of Inheritance?](#typesofinheritance)
-1. [What are different types of Inheritance?](#object)
+1. [Give an example of collowing relation Class A > Class B > Class C inheritance?](#example)
+1. [How is a parameterized constructor handled during inheritance?](#parameterized)
 
 
 
@@ -36,8 +37,8 @@ Tags: DRY
 
 Inhertiance is a mechanism of comsuming members of one class in another by establishing parent-child relationship. By doing so all the members of Child class has access to the parent class. *** Reusability ***
 
-Parent => Parent, Base or Super
-Child  => Derived
+- Parent => Parent, Base or Super
+- Child  => Derived
 
 Child class can consume the member of Parent class as if it is the owner of the class, 
 except *** private *** members of the parents.
@@ -97,21 +98,108 @@ Every class this is defined by us  or pre-defined in the library has a default p
 
 ---
 #### 4. What are different types of Inheritance?**{#typesofinheritance}
+To simply remember, there are ony two types:
+1. Single: 1 immediate parent class
+2. Multiple: more than one immediate parent class. (This is not supported in C#)
 
-On the basis of:
-- **Number of parents a child can have:** 
-- **Number of child a parent can have:** 
+![Alt Text](../../src/Assets/inhertance.png)
 
-Types:
-1. Single 
-2. Multi-Level
-3. Hierarchical
-4. Multiple 
-5. Hybrid
+---
 
-![Alt Text](../../src/Assets/Inheritance.png)
+#### Give an example of collowing relation Class A > Class B > Class C inheritance? {#example}
 
 
-## See also
 
-* https://link-to-more-info
+```csharp
+using System;
+using static IntroCS.Program;
+
+namespace IntroCS
+{
+	public class Program {
+        static void Main()
+        {
+            Console.WriteLine("This is Main Method");
+            ClassC instance = new ClassC();//calls the constructor until Parent
+        }
+
+        public class ClassA
+	    {
+		    public ClassA()
+		    {
+			    Console.WriteLine("Class A constructor");
+		    }
+	    }
+    public class ClassB:ClassA
+        {
+		    public ClassB() {  
+                  Console.WriteLine("Class B constructor");
+            }
+        }
+
+    public class ClassC : ClassB
+        {
+        public ClassC()
+            {
+                Console.WriteLine("Class B constructor");
+            }
+        }
+    }
+}
+
+
+```
+---
+#### How is a parameterized parent constructor handled during inheritance?{#parameterized}
+
+We have to explicitly call it using the "base" class,
+
+using System;
+using static IntroCS.Program;
+
+namespace IntroCS
+{
+	public class Program {
+        static void Main()
+        {
+            Console.WriteLine("This is Main Method");
+            ClassB instance = new ClassB();
+            ClassC instanceTwo = new ClassC();
+            instance.display();
+            instanceTwo.display();
+        }
+
+        public class ClassA
+        {
+            int x;
+            public ClassA(int x)
+            {
+                this.x = x;
+            }
+            public void display()
+            {
+                Console.WriteLine("Class A constructor value is:" + x);
+            }
+        }
+    public class ClassB:ClassA
+        {   
+		    public ClassB():base(19) {
+                  Console.WriteLine("Class B constructor");
+            }
+
+        }
+    public class ClassC : ClassA
+        {
+        public ClassC():base(21)
+            {
+                Console.WriteLine("Class C constructor");
+            }
+        }
+    }
+}
+```
+---
+
+
+
+##### See also
