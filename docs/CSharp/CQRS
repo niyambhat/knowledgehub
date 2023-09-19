@@ -1,0 +1,10 @@
+## Command & Query Separation
+
+### Command 
+- Does somthing
+- Modifies state
+- should not return value 
+
+### Query 
+- Answers a question 
+- Should return a value 
