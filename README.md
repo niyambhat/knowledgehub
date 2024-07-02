@@ -1,90 +1,92 @@
 # Website
 
-This is a Kowledge hub
+This is a Knowledge hub.
 
 ### Following Tech are discussed
-Programming Languages & Frameworks:
 
-HTML/CSS/JavaScript
-.NET
-TypeScript
-PHP
-C#
-Java
-Scala
-Coffee Script
-JavaScript:
+**Programming Languages & Frameworks:**
+- HTML/CSS/JavaScript
+- .NET
+- TypeScript
+- PHP
+- C#
+- Java
+- Scala
+- Coffee Script
 
-Vanilla JS
-ES6
-AJAX
-Promises
-async/await
-Web APIs
-React
-Next JS
-Node JS
-Express
-jQuery
-Local Storage
-Cookies
-Testing:
+**JavaScript:**
+- Vanilla JS
+- ES6
+- AJAX
+- Promises
+- async/await
+- Web APIs
+- React
+- Next JS
+- Node JS
+- Express
+- jQuery
+- Local Storage
+- Cookies
 
-React Testing Library
-Jest
-Enzyme
-Styling & UI Component Libraries:
+**Testing:**
+- React Testing Library
+- Jest
+- Enzyme
 
-Responsive design
-CSS (Grid, Floats, Flexbox)
-LESS
-SASS
-Bootstrap
-Material UI
-Chakra UI
-Framer
-Tailwind
-Database:
+**Styling & UI Component Libraries:**
+- Responsive design
+- CSS (Grid, Floats, Flexbox)
+- LESS
+- SASS
+- Bootstrap
+- Material UI
+- Chakra UI
+- Framer
+- Tailwind
 
-DynamoDB
-SQL Server
-MySQL
-Oracle
-PostgreSQL
-MongoDB
-Cloud Technologies:
+**Database:**
+- DynamoDB
+- SQL Server
+- MySQL
+- Oracle
+- PostgreSQL
+- MongoDB
 
-Microsoft Azure
-AWS
-CMS:
+**Cloud Technologies:**
+- Microsoft Azure
+- AWS
 
-Drupal
-WordPress
-Design Tools:
+**CMS:**
+- Drupal
+- WordPress
 
-Figma
-Adobe Creative Suite
-Canva
-CI/CD Tools:
+**Design Tools:**
+- Figma
+- Adobe Creative Suite
+- Canva
 
-Git
-GitHub
-Bitbucket
-Jenkins
-Other Tools & IDE’s:
+**CI/CD Tools:**
+- Git
+- GitHub
+- Bitbucket
+- Jenkins
 
-Jira
-Docker
-IntelliJ
-VS Code
-iTerm2
-Methodologies & Architecture:
+**Other Tools & IDE’s:**
+- Jira
+- Docker
+- IntelliJ
+- VS Code
+- iTerm2
 
-SOLID
-Agile
-Scrum
-MVC
-TDD
-Clean Architecture
-Microservices
-Atomic Design
+**Methodologies & Architecture:**
+- SOLID
+- Agile
+- Scrum
+- MVC
+- TDD
+- Clean Architecture
+- Microservices
+- Atomic Design
+
+Learning while in University
