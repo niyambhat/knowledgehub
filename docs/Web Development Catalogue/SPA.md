@@ -111,8 +111,10 @@ Steps:
 npm i save-dev webpack webpack-cli webpack-dev-server style-loader scc-loader babel-loader 
 ```
 
-- style-loader injects CSS into the DOM by adding a <style> tag.
-- css-loader interprets @import and url() in CSS files and resolves them, meaning it translates these directives into import statements that Webpack can understand and process.
+
+- `style-loader` injects CSS into the DOM by adding a `<style>` tag.
+- `css-loader` interprets `@import` and `url()` in CSS files and resolves them, meaning it translates these directives into import statements that Webpack can understand and process.
+
 
 Recommended reading:
 https://www.smashingmagazine.com/2017/02/a-detailed-introduction-to-webpack/
@@ -209,7 +211,6 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
-
 ```
 
 
