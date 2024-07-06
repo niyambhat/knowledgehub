@@ -66,6 +66,7 @@ Great experience of what goes on behind the scenes.
 ### Adding support for ES6 and JSX:
 ```bash
 npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react
+```
 
 ### Babel Presets 
 Adding .babelrc in root:
@@ -74,7 +75,7 @@ Adding .babelrc in root:
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"]
 }
-
+```
 
 Transpiling is the process of converting source code from one high-level programming language to another.
 
@@ -105,9 +106,65 @@ Without module loaders and bundlers, you could always combine your files manuall
 Steps:
 ```bash 
 npm i save-dev webpack webpack-cli webpack-dev-server style-loader scc-loader babel-loader 
+```
+
+- style-loader injects CSS into the DOM by adding a <style> tag.
+- css-loader interprets @import and url() in CSS files and resolves them, meaning it translates these directives into import statements that Webpack can understand and process.
 
 Recommended reading:
 https://www.smashingmagazine.com/2017/02/a-detailed-introduction-to-webpack/
+
+
+### Create webpack.config.js
+
+### `webpack.config.js`
+
+This webpack configuration file sets up a development environment with features for transforming ES6 to JavaScript, loading CSS, resolving file extensions, outputting bundled JS, defining a development server, and enabling Hot Module Replacement (HMR).
+
+Which looks like 
+```Javascript
+const path = require("path");
+const webpack = require("webpack");
+
+module.exports = {
+  entry: "./src/index.js",
+  mode: "development",
+
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: { presets: ["@babel/env"] },
+        },
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/dist/", // Ensure this matches devServer publicPath
+    filename: "bundle.js",
+  },
+  resolve: {
+    extensions: ["*", ".js", ".jsx"],
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    hot: "only",
+    port: 3000,
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+};
+```
+
 
 ### Folder structure 
 public
