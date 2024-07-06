@@ -4,10 +4,9 @@ sidebar_position: 2
 
 # React project from scratch
 
-Reference: Building Modern Projects with React by Shaun Wisel
+Reference: Creating a React App from scratch 
 
 ## What does React offer?
-
 - Provides a straightforward and powerful way to render data in the user's browser.
 - Efficiently updates the user interface in response to changes in the underlying data.
 - Provides little guidance on how to load, store, and manipulate this data, allowing developers flexibility to choose the best approach for their applications.
@@ -16,7 +15,7 @@ As a result, data loading and management logic often becomes tightly integrated 
 
 If we can find a way to effectively identify and organize the many different types of concerns in an application, this goes a long way toward making our code base more maintainable. This brings us to **SoC (Separation of Concerns)**.
 
-### SoC is the main concept behind React.
+**SoC is the main concept behind React.**
 
 ## React Ecosystem
 
@@ -31,19 +30,22 @@ Great experience of what goes on behind the scenes.
 
 ### Starting Ingredients:
 
-- `index.html`
-- Support for ES6
-- `webpack` (building our app as well as serving)
-- Root component
-- `react-hot-loader`
+Create a folder structure as such
+my-react-app/
+  |- public/
+  |  |- index.html
+  |- src/
+  |  |- index.js
 
-### Steps:
 
-1. `npm init`
+### Initializing project:
+
+1. Inside an empty folder 
+```bash
+npm init -y
+```
 2. Create folder structure:
-   - `public`
-   - `src`
-
+C
 ### Inside `index.html`:
 
 ```html
@@ -64,6 +66,7 @@ Great experience of what goes on behind the scenes.
 
 
 ### Adding support for ES6 and JSX:
+
 ```bash
 npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react
 ```
@@ -115,13 +118,12 @@ Recommended reading:
 https://www.smashingmagazine.com/2017/02/a-detailed-introduction-to-webpack/
 
 
-### Create webpack.config.js
-
 ### `webpack.config.js`
+On the root create a new file called webpack.config.js.
 
 This webpack configuration file sets up a development environment with features for transforming ES6 to JavaScript, loading CSS, resolving file extensions, outputting bundled JS, defining a development server, and enabling Hot Module Replacement (HMR).
 
-Which looks like 
+
 ```Javascript
 const path = require("path");
 const webpack = require("webpack");
@@ -165,12 +167,71 @@ module.exports = {
 };
 ```
 
+### Add React-refresh to hotreload UI changes on browser
 
-### Folder structure 
-public
-- index.html
+```bash
+npm install --save-dev @pmmmwh/react-refresh-webpack-plugin react-refresh
+```
+Then in webpack.config.js,
 
-src
-.babelrc
-package.json
+```Javascript
+const path = require("path");
+..
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+
+module.exports = {
+  entry: "./src/index.js",
+  mode: "development",
+
+  module: {
+    rules: [
+      ....
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin(), // Add the React Refresh Webpack Plugin
+  ],
+};
+
+```
+### Checkpoint, the file structiore should look as such. 
+my-react-app/
+  |- public/
+  |  |- index.html
+  |- src/
+  |  |- index.js
+  |  |- App.js
+
+Index.js is where we initialze or react component such that it attaches to the root in Index.html
+```Jsx
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+ReactDOM.render(<App />, document.getElementById("root"));
+
+```
+
+
+Then we start coding our app in App.js, building and adding new components as we go along
+```jsx
+import React from 'react';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Welcome to My App</h1>
+      <p>This is a simple React application.</p>
+    </div>
+  );
+};
+
+export default App;
+```
+
+### Finish voila
+
+
+
+
 
